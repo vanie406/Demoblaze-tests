@@ -50,7 +50,20 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+          args: [
+            '--headless=new',            // use new headless mode
+            '--disable-gpu',
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-infobars',
+            '--disable-extensions',
+            '--window-size=1920,1080',
+            '--remote-debugging-port=9222',
+            '--user-data-dir=/tmp/chrome-profile' // temporary user directory for GitHub Actions
+          ]
+        }
     }],
 
     //
