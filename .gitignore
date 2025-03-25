@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# WDIO test results
+allure-results/
+allure-report/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
